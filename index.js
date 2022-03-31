@@ -13,8 +13,11 @@ client.on("messageCreate", message => {
   if (!message.content.startsWith(prefix)) return
   const args = message.content.split(" ");
   const commandName = args.shift().slice(prefix.length)
-  if(commandName == "ping") {
-    message.channel.send("Pong !")
+  try{
+    const commandFile = require('./commands/' + commandName + ".js")
+    commandFile.run(message, client)
+  } catch (e) {
+    console.log(e)
   }
 })
 
