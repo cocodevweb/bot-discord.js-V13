@@ -34,3 +34,5 @@ Ouvrervotre terminalpuis faites npm init
 Puis npm i discord.js@13.6.0 dotenv pour installer un fichier pour les modules + le dotenv
 
 Aller dans votre package.json puis enlever le ^ a la ligne discord.js (12) afin d'enlever les mises a jours automatique + dotenv (13)
+
+Pour démarrer votre bot faites juste node index.js
